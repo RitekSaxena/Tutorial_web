@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CHEMOPHILE</title>
+</head>
+
+<style>
+
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        color: aliceblue;
+        font-size: 20px;
+        overflow-x: hidden;
+        font-family: 'Flamenco', cursive;
+    }
+
+    header{
+        background-image:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url("{% static 'back.jpg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height:100vh ;
+        z-index: -2;
+
+    }
+
+    .clearfix:after{
+        content: ".";
+        visibility: hidden;
+        display: block;
+        height: 0px;
+        clear: both;
+        padding-bottom: 50px;
+
+    }
+    
+    .row{
+        max-width: 1180px;
+        height:auto;
+        margin: 0 auto;
+    }
+
+
+    .logo{
+        width: 50px;
+         height: auto;
+         float: left;
+         margin-top: 20px;
+        
+    }
+
+    .main-nav{
+        float: right;
+        margin-top: 50px;
+    }
+
+    .main-nav li{
+        display: inline-block;
+        list-style: none;
+        margin-left: 40px;
+    }
+    .main-nav li a{
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 90%;
+        font-weight: 100;
+        padding: 5px 0px;
+    }
+    .main-content{
+        
+        width: 1180px;
+        position: absolute;
+        top: 45%;
+        left: 40%;
+        transform: translate(-40%,-20%);
+
+    }
+    h1{
+        color:wheat;
+        font-size: 200%;
+        word-spacing: 5px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: lighter;
+    }
+
+    .btn{
+        display: inline-block;
+        padding: 10px 30px;
+        font-weight: lighter;
+        text-decoration: none;
+       
+        text-transform: uppercase;
+        transition: border 0.2s color 0.2s background-color 0.2s;
+    }
+
+    .btn-premium{
+        background-color: transparent;
+        color: #bf55ec;
+        margin-right: 15px;
+        border: 1px solid #bf55ec;
+        border-radius: 200px;
+        margin-top: 20px;
+    }
+
+    .btn-courses{
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid whitesmoke;
+        border-radius: 2000px;
+    }
+
+    .btn-drop{
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid whitesmoke;
+        border-radius: 20px;
+        margin-left: 10px;
+    }
+    .btn-drop:hover{
+        background-color: burlywood;
+    }
+
+    .btn-bar{
+        background-color: transparent;
+        color: #fff;
+        
+    }
+
+    .main-nav li a:hover{
+        border-bottom: 2px solid #bf55ec;
+    }
+    
+    .btn-premium:hover{
+        background-color: wheat;
+    }
+    .btn-courses:hover{
+        background-color: #bf55ec;
+    }
+    .jhalar{
+        animation:colorchange 1s infinite;
+    }
+
+    @keyframes colorchange{
+        0%{color: red;}
+        25%{color:#bf55ec}
+        50%{color: #fff;}
+        75%{color: greenyellow;}
+        100%{color: #bf55ec;}
+    }
+
+    .bar-icon{
+        display: none;
+    }
+
+    
+
+    @media only screen and ( max-width: 1246px ){
+        .main-content{
+            width: 100%;
+            padding: 0px 2%;
+        }
+        
+    }
+    @media only screen and ( max-width: 998px ){
+        h1{
+            font-size: 160%;
+        }
+    }
+
+    @media only screen and ( max-width: 780px ){
+        h1{
+            font-size: 100%;
+        }
+        .main-nav{display:none;}
+        
+        .bar-icon{
+            display: inline-block;
+            color: #fff;
+            float  :right;
+            margin-top: 30px;
+            margin-right: 20px;
+        }
+
+        .main-nav{
+            float: left;
+        }
+
+        .main-nav li{
+           
+            display: block;
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+
+    }
+
+    .menu ul li{
+        position: relative;
+    }
+
+    .menu ul li ul li{
+        height: 50px;
+        padding-top: 10px;
+        text-align: center;
+        color: #fff;
+        font-size: 27px;
+        font-weight: bold;
+        
+        list-style: none;
+    }
+    .menu {
+        margin-top: 40px;
+    }
+   
+    .menu  ul li ul{
+        
+        position: absolute;
+        left: 200px;
+        top: 0px;
+    }
+    .dropdo{
+        display: none;
+    }
+
+    
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+<header>
+
+    
+        <div class="main-content">
+        <h1 class="animated slideInUp" >WELCOME TO <span class="jhalar">CHEMOPHILE</span> WHERE YOU <br/>WILL BE LEARNING CHEMISTRY <br/>IN THE MOST EFFICIENT WAY.</h1>
+
+    <a href="#" class="btn animated bounceInDown btn-premium">Login As Premium Member</a>
+    <a href="{% url 'landing' %}" class="btn animated bounceInDown btn-courses">Visit As A Guest</a>
+</div>
+</header>
+
+<script>
+
+function slideshow(){
+    var x = document.getElementById("check");
+    if(x.style.display === "none"){
+        x.style.display = "block"
+    }
+    else{
+        x.style.display = "none"
+    }
+}
+
+function dropdown(){
+    var y = document.getElementById("drop");
+    console.log(y)
+
+    if(y.style.display === "none"){
+        y.style.display = "block"
+    }
+    else{
+        y.style.display = "none"
+    }
+}
+
+</script>
+
+</body>
+</html>

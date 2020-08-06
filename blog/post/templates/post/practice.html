@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            display:none;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            margin: 20px auto;
+            flex-wrap: wrap;
+
+        }
+        .list{
+            border: 1px solid red;
+            margin : 5px 3px;
+            padding: 3px;
+            
+        }   
+    </style>
+    <div class="box" id="box">
+        <div class="list">this is item-1</div>
+        <div class="list">this is item-2</div>
+        <div class="list">this is item-3</div>
+        <div class="list">this is item-4</div>
+        <div class="list">this is item-5</div>
+        <div class="list">this is item-6</div>
+        <div class="list">this is item-7</div>
+        <div class="list">this is item-8</div>
+        <div class="list">this is item-9</div>
+        <div class="list">this is item-10</div>
+
+        
+        
+        
+    </div>
+
+<script>
+    console.log("heeeeeeeelllllooooooo")
+
+    let box = document.getElementById('box');
+
+    
+
+    setTimeout(run , 12000);
+
+    function run(){
+        box.style.display = "flex"
+    }
+
+
+</script>
+
+</body>
+</html>

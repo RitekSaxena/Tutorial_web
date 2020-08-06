@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+
+    <header class="text-gray-500 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">CHEMOPHILE</span>
+            </a>
+            <nav
+                class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-white" style="cursor: pointer;" href="{% url 'landing' %}">HOME</a>
+                <a class="mr-5 hover:text-white" style="cursor:no-drop;" onclick="goBack()">GO BACK</a>
+
+
+            </nav>
+            <button
+                class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">ALREADY
+                A MEMBER ? LOGIN
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+
+
+    <section class="text-gray-500 bg-gray-900 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">BE A PREMIUM MEMBER TODAY</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Go Premium And Take Benifit Of Our Quality Content
+                    At A Very Cheap Price</p>
+                <div class="flex mx-auto border-2 border-teal-500 rounded overflow-hidden mt-6">
+                    <button class="py-1 px-4 bg-teal-500 text-white focus:outline-none">Monthly</button>
+
+                </div>
+            </div>
+
+            <div class="flex flex-wrap -m-4">
+
+
+
+
+
+                <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+                    <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden">
+                        <h2 class="text-sm tracking-widest text-gray-600 title-font mb-1 font-medium">SPECIAL</h2>
+                        <h1
+                            class="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
+                            <span>Rs. 100</span>
+                            <span class="text-lg ml-1 font-normal text-gray-600">/mo</span>
+                        </h1>
+                        <p class="flex items-center text-gray-500 mb-2">
+                            <span
+                                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5"></path>
+                                </svg>
+                            </span>FULL ACCESS TO ALL THE VIDEOS AND CONTENT
+                        </p>
+                        <button
+
+                            class="flex items-center mt-auto text-white bg-blue-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-700 rounded">ENROLL
+                            NOW
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+
+</html>
